@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+html {          /* changed from body in original reset CSS */
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* End Reset CSS */
+/* Begin Site Styles */
+
+/* 18 px base text */
+/* 22 px baseline grid */
+/* text sizing follows modular scale of golden ratio */
+
+/* Base styles */
+
+html{
+  font-size: 1.125em; /* 18 px / 16 px = 1.125 */
+  /*120% of 18 = 21.6, round up to 22 */
+  line-height: 1.222em; /*22 px / 18 px = 1.222 */
+  text-renderinig: optimizeLegibility;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #f4edd9; /*tan*/
+}
+
+body {
+  padding-left: 1.833em; /*33 px / 18 px = 1.833 */
+  padding-right: 1.833em; /* = 1.5 line heights for readability on small screens*/
+  padding-top: 2.444em; /*44 px / 18 px = 2.444 = 2 line heights */
+}
+p, ul{
+  padding-bottom: 1.222em; /* 1 line height */
+}
+ul {
+  list-style-type: none;
+}
+
+h1,h2{
+  /* Use the golden ratio (its the ratio for DNA!) as a modular scale: http://www.modularscale.com/?1&em&1.618 */
+  font-size: 1.618em; /* 29.124 px / 18 px = 1.618 */
+  padding-bottom: 0.755em; /* 22 px / 29.124 px = 0.755 (1 line heights) */
+  color: #298479; /*dark green-grey*/
+}
+h1, h3 {
+  font-weight: bold;
+}
+article{
+  /* Add a little extra padding for nicer spatial relationships */
+  padding-bottom: 0.611em /* 11 px / 18 px = 0.611 (.5 line height) */
+}
+a {
+    color: #298479; /*dark green-grey*/
+    text-decoration: none;
+}
+i, em, cite{
+  font-style: italic;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+/* Hide the figure captions so that screen readers will still read them*/
+figcaption {
+  position: absolute;
+  top: -9999999px;
+  left: -9999999px;
+}
+
+/* Layout styles */
+/* put horizontal navigation above header */
+#navigation, #contact {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+#navigation {
+  top:0;
+}
+#navigation li, #contact li {
+  width: 25%;
+  float:left;
+}
+.flexbox #navigation ul {
+  display: flex;
+}
+.flexbox #navigation li {
+  float: none;
+}
+header {
+  padding-top: 1.222em; /*22 px / 18 px = 1.222 */
+  padding-bottom: 1.222em; /*22 px / 18 px = 1.222 */
+}
+/* Modular styles */
+nav ul {
+  text-align: center;
+}
+nav li {
+  display: block;
+  padding-top: 0.611em; /* 11 px / 18 px = 0.611 (.5 line height) */
+  padding-bottom: 0.611em;
+  background-color: #298479; /*dark green-grey */
+}
+nav a {
+  color: #f4edd9; /*tan*/
+}
+/* Every project box has a heading and a paragraph description */
+.projectbox > h3 {
+  padding-bottom: 0.611em /* 11 px / 18 px = 0.611 (.5 line height) */
+}
+
+/* State styles */
+@media screen and (min-width: 500px) {
+  body {
+    padding-left: 8.8%; /* 44 px / 500 px = 0.088 */
+    padding-right: 8.8%;
+  }
+}
+
+/* 2-column grid for viewports larger than 830px */
+/* projectbox modules need to be evenly spaced */
+/* Font size: 18 px
+   Line-height: 22 px
+   Screen size: 830px
+   Margins: 2*22px = 44px each
+   Gutters: 1.5*22 = 33px each
+   Content-width: 830 - 44*2 = 742px
+   742 - 33 gutter = 709px for two equal-sized columns
+   709 / 2 = 354.5 px width per column
+   offset for second column: 354.5px + 33 px = 387.5 px
+*/
+@media screen and (min-width: 830px) {
+  body {
+    padding-left: 5.3%; /* 44 px / 830 px = 0.053 */
+    padding-right: 5.3%;
+  }
+  .projectbox {
+    width: 47.776%; /* 354.5 px / 742 px = 0.47776 */
+    float: left;
+  }
+  /*Create the second column of projectbox elements */
+  .projectbox:nth-of-type(2n){
+    float: none;
+    margin-left: 52.2237%; /*387.5 px / 742 px = 0.522237 */
+  }
+  .project-type {
+    float: left;
+  }
+  /*Flexbox styles for capable browsers */
+  .flexbox .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .flexbox .projectbox {
+    float: none;
+    margin: 0;
+  }
+  /*CSS grid styles for capable browsers */
+  .cssgrid .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 4.447%; /*33px / 742px = 0.04447*/
+  }
+  .cssgrid .projectbox {
+    width:auto;
+  }
+  /*flex style for header on larger screens */
+  .flexbox h1 { /* Increase heading size if we are moving the image */
+    font-size: 2.618em; /*47.124 px / 18 px = 2.618 */
+    margin-top: 2.618em; /*put heading lower*/
+  }
+  .flexbox header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .cssgrid header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* 3-column grid for viewports larger than 1280px */
+/* Font size: 22 px
+   Line-height: 27 px
+   Screen size: 1280px
+   Margins: 2*27px = 54px each
+   Gutters: 1.5*27 = 40.5px each
+   Content-width: 1280 - 54*2 = 1172px
+   1172 - 40.5*2 gutters = 1091px for three equal-sized columns
+   1091/3 = 363.666667 px width per column
+   offset for second column: 363.66667 + 40.5 = 404.166667 px
+   offset for third column: 363.66667 + 40.5 + 363.66667 + 40.5 = 808.333333 px
+*/
+
+@media screen and (min-width: 1280px){
+  html{
+    font-size: 1.222em; /* 22 px / 18 px = 1.222  */
+    line-height: 1.227em; /* 27 / 22 px = 1.22727*/
+  }
+  body {
+    padding-left: 4.2%; /* 54 px / 1280 px = 0.0421875 */
+    padding-right: 4.2%;
+  }
+  .projectbox {
+    width: 31.029%; /* 363.66667 px / 1172 px = 0.3102957 */
+  }
+  .projectbox:nth-of-type(2n){
+    margin-left: 0; /*reset previous media query*/
+  }
+  /*Create the second column of projectbox elements */
+  .projectbox:nth-of-type(3n+2){ /*2,5,8*/
+    float: none;
+    margin-left: 34.4852%; /*404.166667 px / 1172 px = 0.344852 */
+  }
+  /*Create the third column of projectbox elements */
+  .projectbox:nth-of-type(3n){ /*3,6,9,...*/
+    float: none;
+    margin-left: 68.9704%; /*808.333333 px / 1172 px = 0.689704 */
+  }
+  /*Flexbox styles for capable browsers */
+  .flexbox .projectbox {
+    margin: 0; /* reset above float styles */
+  }
+  /*CSS grid styles for capable browsers */
+  .cssgrid .projects {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 3.4556%; /*40.5px / 1172px = 0.034556 */
+  }
+}
