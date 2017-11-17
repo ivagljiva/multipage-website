@@ -190,7 +190,7 @@ nav a {
     float: left;
   }
   /*Flexbox styles for capable browsers */
-  .flexbox .projects {
+  .flexbox .project-type {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -199,14 +199,24 @@ nav a {
     float: none;
     margin: 0;
   }
+  .flexbox .project-heading{
+    flex-basis: 100%;
+  }
   /*CSS grid styles for capable browsers */
-  .cssgrid .projects {
+  .cssgrid .project-type {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4.447%; /*33px / 742px = 0.04447*/
+    /*grid-template-areas:
+      "header  header"
+      "content content";*/
   }
   .cssgrid .projectbox {
     width:auto;
+  }
+  .cssgrid .project-heading {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
   /*flex style for header on larger screens */
   .flexbox h1 { /* Increase heading size if we are moving the image */
@@ -266,8 +276,11 @@ nav a {
     margin: 0; /* reset above float styles */
   }
   /*CSS grid styles for capable browsers */
-  .cssgrid .projects {
+  .cssgrid .project-type {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 3.4556%; /*40.5px / 1172px = 0.034556 */
+  }
+  .cssgrid .project-heading {
+    grid-column-end: 4;
   }
 }
