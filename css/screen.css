@@ -106,6 +106,8 @@ img {
   display: block;
   max-width: 100%;
 }
+/* TODO: figure out how to center icons */
+}
 /* Hide the figure captions so that screen readers will still read them*/
 figcaption {
   position: absolute;
