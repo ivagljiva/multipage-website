@@ -190,12 +190,12 @@ nav a {
     padding-left: 5.3%; /* 44 px / 830 px = 0.053 */
     padding-right: 5.3%;
   }
-  .projectbox {
+  .projectbox, .scc-photos {
     width: 47.776%; /* 354.5 px / 742 px = 0.47776 */
     float: left;
   }
   /*Create the second column of projectbox elements */
-  .projectbox:nth-of-type(2n){
+  .projectbox:nth-of-type(2n), .scc-photos:nth-of-type(2n){
     float: none;
     margin-left: 52.2237%; /*387.5 px / 742 px = 0.522237 */
   }
