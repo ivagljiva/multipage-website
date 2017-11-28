@@ -109,7 +109,7 @@ img {
 /* TODO: figure out how to center icons */
 }
 /* Hide the figure captions so that screen readers will still read them*/
-figcaption {
+#caption-header {
   position: absolute;
   top: -9999999px;
   left: -9999999px;
