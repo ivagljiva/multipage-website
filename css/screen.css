@@ -157,11 +157,11 @@ nav a {
   padding-bottom: 0.611em /* 11 px / 18 px = 0.611 (.5 line height) */
 }
 
-/* Add some space below figures on project page */
-.scc-photos{
+/* Add some space below figures on project and research pages */
+.scc-photos, #whiteflies-tree{
     padding-bottom: 1.222em; /*22 px / 18 px = 1.222 */
 }
-.scc-photos > figcaption {
+.scc-photos > figcaption, #whiteflies-tree > figcaption {
   text-align: center;
 }
 
