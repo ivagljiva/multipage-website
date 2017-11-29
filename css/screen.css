@@ -108,14 +108,18 @@ img {
 }
 /* TODO: figure out how to center icons */
 }
+
+/* Layout styles */
+figcaption {
+  text-align: center;
+}
+
 /* Hide the figure captions so that screen readers will still read them*/
 #caption-header {
   position: absolute;
   top: -9999999px;
   left: -9999999px;
 }
-
-/* Layout styles */
 /* put horizontal navigation above header */
 #navigation, #contact {
   position: absolute;
@@ -160,9 +164,6 @@ nav a {
 /* Add some space below figures on project and research pages */
 .scc-photos, #whiteflies-tree{
     padding-bottom: 1.222em; /*22 px / 18 px = 1.222 */
-}
-.scc-photos > figcaption, #whiteflies-tree > figcaption {
-  text-align: center;
 }
 
 /* State styles */
