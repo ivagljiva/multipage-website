@@ -106,14 +106,11 @@ img {
   display: block;
   max-width: 100%;
 }
-/* TODO: figure out how to center icons */
-}
 
 /* Layout styles */
 figcaption {
   text-align: center;
 }
-
 /* Hide the figure captions so that screen readers will still read them*/
 #caption-header {
   position: absolute;
@@ -155,6 +152,11 @@ nav li {
 }
 nav a {
   color: #f4edd9; /*tan*/
+}
+/*Center footer images*/
+nav img{
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Every project box has a heading and a paragraph description */
 .projectbox > h3 {
