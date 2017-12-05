@@ -250,7 +250,7 @@ nav img{
   }
 }
 
-/* 3-column grid for viewports larger than 1280px */
+/* 3-column grid for projectboxes on viewports larger than 1280px */
 /* Font size: 22 px
    Line-height: 27 px
    Screen size: 1280px
@@ -293,11 +293,17 @@ nav img{
     margin: 0; /* reset above float styles */
   }
   /*CSS grid styles for capable browsers */
-  .cssgrid .project-type {
+  .cssgrid .long-text-container {
+    display: grid;
+  }
+  .cssgrid .project-type, .long-text-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 3.4556%; /*40.5px / 1172px = 0.034556 */
   }
   .cssgrid .project-heading {
     grid-column-end: 4;
+  }
+  .cssgrid .long-text, #tree-description {
+    grid-column: 1/3;
   }
 }
