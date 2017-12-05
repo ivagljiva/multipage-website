@@ -207,17 +207,20 @@ nav img{
     float: left;
   }
   /*Flexbox styles for capable browsers */
-  .flexbox .project-type {
+  .flexbox .project-type, .scc-photo-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .flexbox .projectbox {
+  .flexbox .projectbox, .scc-photos {
     float: none;
     margin: 0;
   }
   .flexbox .project-heading{
     flex-basis: 100%;
+  }
+  .flexbox .scc-photos{
+    margin: auto;
   }
   /*CSS grid styles for capable browsers */
   .cssgrid .project-type {
