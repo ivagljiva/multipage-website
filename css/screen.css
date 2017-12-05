@@ -111,8 +111,8 @@ img {
 figcaption {
   text-align: center;
 }
-/* Hide the figure captions so that screen readers will still read them*/
-#caption-header {
+/* Hide certain nonessential captions/headings so that screen readers will still read them*/
+#caption-header, #scc-photo-heading {
   position: absolute;
   top: -9999999px;
   left: -9999999px;
